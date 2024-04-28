@@ -1,0 +1,14 @@
+mkdir C:\Dropbox_Temp\git1
+C:\Dropbox\Infra\x-rd
+git init  --separate-git-dir=C:\Dropbox_Temp\git1
+git add Vagrantfile
+git add git_notes.txt
+git config user.name tofubotu
+git config user.email .
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:tofubotu/xr-d.git
+git push -u origin main
+
+checkout
+git clone --separate-git-dir=C:\Dropbox_Temp\git1 git@github.com:tofubotu/xr-d.git
