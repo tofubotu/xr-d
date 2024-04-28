@@ -1,11 +1,16 @@
 Life in DROPBOX
 
+1. Get some pc, prefebly yours lol
+2. install virtualbox (i still use 6.0! dont worry this vagrant supports it)
+3. in git checkout dir hit: vagrant up
+
+/// notes
 Run this to change vm settings (mem/cpu)
 vagrant reload --provision 
 
 Softer settings like mount points:
 vagrant reload
-
+// end of notes
 
 After initial 'vagrant up' and first reboot from inline
 you can access in to system with 'vagrant ssh'
@@ -41,6 +46,8 @@ mkdir /home/vagrant/secret_data
 
 encfs --public /vagrant_data/secret_data /home/vagrant/secret_data
 
+if you use it against this current repoi it will just ask password (noted below for testing!)
+
 vagrant@xr-d:~$ encfs --public /vagrant_data/secret_data /home/vagrant/secret_data
 option '--public' ignored for non-root userCreating new encrypted volume.
 Please choose from one of the following options:
@@ -53,7 +60,7 @@ Please choose from one of the following options:
 
 New Encfs Password:
 
-lets use password MegaMoth4
+lets use password MegaMoth4 for demonstrating file based AES
 
 next time you mount it will just ask password
 

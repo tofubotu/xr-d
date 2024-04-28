@@ -3,10 +3,12 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "xr-d"
   config.vm.provider "virtualbox" do |vb|
     vb.name = "xr-d"
+    vb.memory = "4096"
+    vb.cpus = 4
   end
 
   config.vm.network "public_network", use_dhcp_assigned_default_route: true
-
+  config.vm.synced_folder ".", "/vagrant_data"
   config.vm.provision "shell", privileged: true, inline: <<-SHELL
     sudo apt-get update
     sudo apt-get install -y \
